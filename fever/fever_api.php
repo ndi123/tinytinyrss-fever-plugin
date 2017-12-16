@@ -18,6 +18,11 @@ class FeverAPI extends Handler {
 	private $ID_HACK_FOR_MRREADER = 0;
 
 	private $xml;
+	
+	function __construct()
+	{
+    		$this->dbh = Db::get();
+	}
 
 	// always include api_version, status as 'auth'
 	// output json/xml
